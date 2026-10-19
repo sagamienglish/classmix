@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Classmix</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="updates.css"><link rel="stylesheet" href="theme.css"></head><body>
-<header><a class="brand" href="./"><span class="logo" aria-hidden="true">✳</span><h1>Classmix</h1></a><button id="present" class="quiet">⛶ 表示モード</button></header>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Classmix</title><link rel="icon" type="image/svg+xml" href="icon.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="updates.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="swap.css"></head><body>
+<header><a class="brand" href="./"><img class="logo" src="icon.svg" width="56" height="56" alt=""><h1>Classmix</h1></a><button id="present" class="quiet">⛶ 表示モード</button></header>
 <main><div class="workspace"><aside><h2>設定</h2><div class="tabs"><button class="active" data-mode="number">出席番号</button><button data-mode="name">名前</button></div>
 <div id="numberPanel"><label for="count">生徒数</label><div class="counter"><button type="button" id="countDown" aria-label="クラスの人数を1人減らす">−</button><input id="count" aria-label="クラスの人数" type="number" min="2" max="200" value="46"><span>人</span><button type="button" id="countUp" aria-label="クラスの人数を1人増やす">＋</button></div></div>
 <div id="namePanel" hidden><label>名簿<textarea id="names" placeholder="1行に1人ずつ入力"></textarea></label></div>
@@ -11,4 +11,4 @@
 <button id="generate" class="primary">班をつくる <span>↗</span></button><p id="error" role="alert"></p></aside>
 <section class="results"><div class="result-head"><h2 id="resultTitle">結果</h2><div class="actions"><button id="copy" class="quiet">コピー</button><button id="print" class="quiet">印刷</button></div></div><div class="stats"><span id="summary"></span><span id="balanceStatus"></span></div>
 <div id="mixing" hidden role="status" aria-live="polite"><div class="mix-heading"><span class="mix-star">✳</span><strong>シャッフル中</strong></div><div id="mixTokens" aria-hidden="true"></div><div class="mix-progress"></div></div>
-<div id="groups" class="group-grid" aria-live="polite"></div><div class="result-footer"><button id="shuffle" class="quiet">↻ もう一度</button></div></section></div></main><div id="toast" role="status"></div><script src="app.js"></script></body></html>
+<div class="swap-bar"><span id="swapHint" role="status" aria-live="polite">2人を選んで入れ替え</span><button id="cancelSwap" class="quiet" hidden>選択を解除</button></div><div id="groups" class="group-grid" aria-live="polite"></div><div class="result-footer"><button id="shuffle" class="quiet">↻ もう一度</button></div></section></div></main><div id="toast" role="status"></div><script src="app.js?v=20261019-swap"></script></body></html>
